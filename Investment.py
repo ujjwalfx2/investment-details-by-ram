@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import requests
 
 st.set_page_config(page_title="Investment Details by RAM", layout="wide",initial_sidebar_state="collapsed")
 custom_css = """
@@ -14,7 +13,6 @@ body {
 }
 </style>
 """
-
 # Render the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 
