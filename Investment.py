@@ -4,16 +4,19 @@ import numpy as np
 import requests
 
 st.set_page_config(page_title="Investment Details by RAM", layout="wide",initial_sidebar_state="collapsed")
-st.markdown(
-    """
+custom_css = """
 <style>
-    [data-testid="collapsedControl"] {
+[data-testid="collapsedControl"] {
         display: none
     }
+body {
+    background-color: #f0f2f6; /* Change this to the color you desire */
+}
 </style>
-""",
-    unsafe_allow_html=True,
-)
+"""
+
+# Render the custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)
 
 st.title('Investment Details')
 data = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vScwbSgLHpruvFkDdh_QrjcoheKVnPHyUwOkIKcKgU2r6h6t5SGk5qkuJlXDtwuTM50cQMu4OWliZEp/pub?output=csv')
